@@ -39,6 +39,10 @@ let currentInput = '';
             operand1 = null;
             updateDisplay();
         }
+        function deleteLastChar() {
+            const display = document.getElementById('display');
+            display.value = display.value.slice(0, -1);
+        }                              
 
         function updateDisplay() {
             document.getElementById('display').value = currentInput;
@@ -52,4 +56,4 @@ let currentInput = '';
                 case '/': return a / b;
                 default: return b;
             }
-        }
+        }    
